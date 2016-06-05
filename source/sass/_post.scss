@@ -1,0 +1,45 @@
+.post-page {
+
+  h1 {
+    font-weight: bold;
+  }
+
+  
+  .photo {
+    margin-top: 15px;
+    //margin-bottom: 40px;
+    height: 500px;
+  }
+
+  .fa {
+    font-size: 30px;
+    color: #ccc;
+  }
+
+  a .fa {
+    color: #000;
+  }
+
+  a, 
+  a:hover, 
+  a:active, 
+  a:visited {
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    color: #fd746c;
+  }
+
+  @media (max-width: 768px) {
+    .photo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .gallery-navigation {
+    margin: 40px 0 40px 0;
+  }
+}
