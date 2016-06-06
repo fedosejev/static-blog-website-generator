@@ -10,23 +10,23 @@ body {
   background-color: #fff;
 }
 
-.landing-page {
-  .posts {
-    list-style-type: none;
-    margin: 0;
-
-    li {
-      font-size: 20px;
-      text-align: left;
-      margin: 0 20px;
-    }
-
-    a {
-      color: #999;
-    }
-  }
+a .fa {
+  color: #000;
 }
 
-@import 'collection';
+a, 
+a:hover, 
+a:active, 
+a:visited {
+  color: #ec6563;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+@import 'landing';
 @import 'post';
 @import 'header';
+@import 'footer';

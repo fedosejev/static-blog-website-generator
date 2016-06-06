@@ -66,7 +66,9 @@ function createPostHtmlFile(postHtmlContent, postConfig) {
     postHtml: postHtmlContent,
     postTitle: postConfig.title,
     postDescription: postConfig.description,
-    postSlug: postConfig.slug
+    postSlug: postConfig.slug,
+    googleAnalyticsTrackingId: websiteConfig.googleAnalyticsTrackingId,
+    canonicalPostUrl: getCanonicalPostUrl(websiteConfig, postConfig)
   });
 
   htmlContent = minify(htmlContent, {
@@ -95,6 +97,10 @@ function copyPostImagesToBuild(postConfig) {
       fsExtra.copySync(postImagesDirectory, buildPostImagesDirectory);
     }
   });
+}
+
+function getCanonicalPostUrl(websiteConfig, postConfig) {
+  return websiteConfig.url + postConfig.slug + '/';
 }
 
 function createPost(postDirectoryName) {
@@ -128,7 +134,8 @@ function createLandingPage() {
   var htmlContent = compiled({
     websiteName: websiteConfig.name,
     websiteDescription: websiteConfig.description,
-    posts: posts
+    posts: posts,
+    googleAnalyticsTrackingId: websiteConfig.googleAnalyticsTrackingId
   });
 
   htmlContent = minify(htmlContent, {

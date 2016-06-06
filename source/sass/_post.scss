@@ -1,19 +1,60 @@
 .post-page {
 
+  font-size: 20px;
+
   h1 {
     font-weight: bold;
+    margin: 20px 0 40px 0;
   }
 
-  
-  .photo {
-    margin-top: 15px;
-    //margin-bottom: 40px;
-    height: 500px;
+  img {
+    width: 100%;
   }
 
-  .fa {
-    font-size: 30px;
-    color: #ccc;
+  blockquote {
+    margin: 40px 0;
+  }
+
+  p {
+    margin: 20px 0;
+    line-height: 32px;
+  }
+
+  pre {
+    margin: 20px 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 20px;
+  }
+
+  ol, ul {
+    margin-left: 40px;
+  }
+
+  figure {
+    margin: 40px 0;
+
+    figcaption {
+      text-align: center;
+      font-size: 16px;
+      font-style: italic;
+      color: #999;
+    }
+  }
+
+  h2 {
+    margin-top: 60px;
+  }
+
+  .author-photo {
+    width: 150px;
+    display: block;
+    margin-top: 40px;
+  }
+
+  .clip-shape {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
   }
 
   a .fa {
@@ -24,22 +65,15 @@
   a:hover, 
   a:active, 
   a:visited {
-    text-decoration: none;
-    color: #333;
+    color: #ec6563;
   }
 
   a:hover {
-    color: #fd746c;
+    color: #666;
+    text-decoration: none;
   }
 
-  @media (max-width: 768px) {
-    .photo {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .gallery-navigation {
-    margin: 40px 0 40px 0;
+  #disqus_thread {
+    margin-top: 20px;
   }
 }

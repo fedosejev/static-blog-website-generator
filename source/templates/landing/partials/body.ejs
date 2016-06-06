@@ -1,7 +1,7 @@
 <body class="landing-page">
   <div class="container text-center">
 
-    <%- include('../../partials/navigation') %>
+    <%- include('../../partials/header') %>
 
     <div class="row">
       <div class="col-sm-12">
@@ -11,6 +11,7 @@
           for (var iterator = 0; iterator < posts.length; iterator++) {
           %>
             <li>
+              <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
               <a href="/<%= posts[iterator].slug %>/">
                 <%= posts[iterator].title %>
               </a>
@@ -23,8 +24,12 @@
       </div>
     </div>    
 
+    <%- include('../../partials/footer') %>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/js/app.js"></script>
+
+  <%- include('../../partials/google-analytics') %>
 </body>
