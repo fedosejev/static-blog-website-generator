@@ -68,6 +68,7 @@ function createPostHtmlFile(postHtmlContent, postConfig) {
     postDescription: postConfig.description,
     postSlug: postConfig.slug,
     googleAnalyticsTrackingId: websiteConfig.googleAnalyticsTrackingId,
+    addThisPubId: websiteConfig.addThisPubId,
     canonicalPostUrl: getCanonicalPostUrl(websiteConfig, postConfig)
   });
 
