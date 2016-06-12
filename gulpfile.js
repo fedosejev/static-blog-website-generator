@@ -32,12 +32,19 @@ gulp.task('build-sass-for-production', function () {
         .pipe(gulp.dest('./build/css/'));
 });
 
+gulp.task('build-images-for-production', function () {
+  return gulp
+        .src('./source/images/*.*')
+        .pipe(gulp.dest('./build/images/'));
+});
+
 gulp.task('watch-for-development', function () {
   gulp.watch('./source/js/**/*.js', ['build-js-for-development']);
   gulp.watch('./source/sass/**/*.scss', ['build-sass-for-development']);
+  gulp.watch('./source/images/**/*.*', ['build-images-for-production']);
 });
 
-gulp.task('build-for-development', ['build-js-for-development', 'build-sass-for-development']);
-gulp.task('build-for-production', ['build-js-for-production', 'build-sass-for-production']);
+gulp.task('build-for-development', ['build-js-for-development', 'build-sass-for-development', 'build-images-for-production']);
+gulp.task('build-for-production', ['build-js-for-production', 'build-sass-for-production', 'build-images-for-production']);
 
 gulp.task('default', ['build-for-development']);
